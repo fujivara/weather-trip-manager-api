@@ -29,4 +29,6 @@ model Trip {
   city      String
   startDate DateTime
   endDate   DateTime
+
+  @@map("trips")
 }
