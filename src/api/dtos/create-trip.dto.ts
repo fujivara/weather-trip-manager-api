@@ -1,4 +1,4 @@
-import { IsDate, IsString } from 'class-validator';
+import { IsDate, IsString, IsUrl } from 'class-validator';
 import { Type } from 'class-transformer';
 
 export class CreateTripDto {
@@ -12,4 +12,7 @@ export class CreateTripDto {
   @Type(() => Date)
   @IsDate()
     endDate: Date;
+
+  @IsUrl()
+    image: string;
 }
