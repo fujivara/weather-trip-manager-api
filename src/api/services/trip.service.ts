@@ -18,7 +18,7 @@ export class TripService {
   getAllForUser (query: QueryAllDTO, user: User) {
     return this.tripRepository.findMany({
       where: {
-        city: {
+        cityName: {
           contains: query.search,
           mode: 'insensitive',
         },

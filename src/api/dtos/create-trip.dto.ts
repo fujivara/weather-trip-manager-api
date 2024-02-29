@@ -3,7 +3,7 @@ import { Type } from 'class-transformer';
 
 export class CreateTripDto {
   @IsString()
-    city: string;
+    cityName: string;
 
   @Type(() => Date)
   @IsDate()
