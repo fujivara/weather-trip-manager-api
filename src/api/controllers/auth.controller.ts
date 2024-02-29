@@ -23,6 +23,6 @@ export class AuthController {
   @Get('/signInWithGoogle/callback')
   async signInWithGoogleCallback (@Req() req: any, @Res() res: Response): Promise<void> {
     const { token } = await this.authService.signInWithGoogle(req.user);
-    res.redirect(`https://weather-trip-manager-web-bjc9.vercel.app/?token=${token}`);
+    res.redirect(`https://weather-trip-manager-web.vercel.app/?token=${token}`);
   }
 }
